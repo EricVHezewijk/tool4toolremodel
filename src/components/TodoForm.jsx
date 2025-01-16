@@ -16,12 +16,12 @@ function TodoForm({ addTodo }) {
       <input
         type="text"
         className="todo-input"
-        placeholder="What is the task today?"
+        placeholder="Search tools"
         value={value}
         onChange={(e) => setValue(e.target.value)}
       />
-      <button type="submit" className="todo-btn">
-        Add Task
+      <button className="post-btn">
+        Create Post
       </button>
     </form>
   );

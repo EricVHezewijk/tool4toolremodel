@@ -40,7 +40,7 @@ function TodoWrapper() {
 
   return (
     <div className="TodoWrapper">
-        <h1>Get Things Done!</h1>
+        <h1>Find Tools Nearby!</h1>
       <TodoForm addTodo={addTodo} />
       <div className="feed-container">
         {todos.map((todo) => (
