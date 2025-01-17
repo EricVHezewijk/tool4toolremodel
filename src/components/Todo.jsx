@@ -23,8 +23,11 @@ function Todo({ task, toggleComplete, deleteTodo, editTodo }) {
           <FontAwesomeIcon
             icon={faPenToSquare}
             onClick={() => editTodo(task.id)}
+            className="edit-icon"
           />
-          <FontAwesomeIcon icon={faTrash} onClick={() => deleteTodo(task.id)} />
+          <FontAwesomeIcon  
+            className="delete-icon" icon={faTrash} 
+            onClick={() => deleteTodo(task.id)} />
         </div>
       </div>
       
