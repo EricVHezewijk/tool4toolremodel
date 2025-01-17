@@ -8,7 +8,6 @@
 }
 
 body {
-  background: #8758ff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -158,4 +157,78 @@ h1 {
 .icon-container {
   margin-left: auto;
   margin-top: auto;
+}
+
+.create-post-modal-window-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10rem;
+  background-color: #8758ff;
+  border-radius: 5%;
+  padding: 2rem;
+}
+
+input {
+  all: unset;
+  background-color: #1A1A40;
+  border: none;
+  color: white;
+  padding: 1rem 0 1rem 0;
+  width: 100%;
+  border-radius: 1rem;
+  -webkit-appearance: none; /* Remove spin buttons in WebKit browsers */
+  -moz-appearance: textfield;
+}
+
+.submit-create-post-button {
+  height: 100%;
+  width: auto;
+  margin: 1rem 0 0 0;
+  padding: 1rem 2rem 1rem 2rem;
+  background-color: #1A1A40;
+  color: white;
+  border: none;
+  border-radius: 5;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;    
+  border-radius: 1rem;
+  align-self: center;
+}
+
+.create-post-modal-window-header {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  padding-bottom: 1rem;
+  /* border: 2px solid red;; */
+}
+
+.create-post-modal-window-header-text {
+  font-size: 1.7rem;
+  margin-left: 0.2rem;
+}
+
+.close-post-modal-window-btn {
+  margin-left: auto;
+  height: 100%;
+  aspect-ratio: 1/1;
+  padding: 0.5rem;
+  background-color: #1A1A40;
+  border: 2px solid #1A1A40;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  color: #8758ff;
+  cursor: pointer;
+}
+
+.create-post-form {
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+
 }
