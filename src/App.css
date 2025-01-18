@@ -34,6 +34,7 @@ h4 {
   border-radius: 5px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100vw;
   height: 100vh;
 }
@@ -100,8 +101,8 @@ h4 {
     margin-right: auto;
 }
 
-.image-container img{
-  object-fit: contain;
+.image-container img{ 
+  object-fit: contain; 
   height: 100%;
   width: 100%;
 }
@@ -145,9 +146,11 @@ h4 {
     overflow-y: auto;
     gap: 20px;
     max-height: 70vh;
+    max-width: 50vw;
     width: 100%;
     padding: 1rem;
     overflow-y: auto;
+
 }
 
 .Todo {
@@ -163,14 +166,18 @@ h4 {
 }
 
 .post-text {
-  overflow-wrap: break-word;
-  margin-left: auto;
+  overflow-y: auto;
+  max-width: 80%;
+  scrollbar-width: none;
 }
 
 .post-info-container {
   display: flex;
+  flex-direction: column;
   padding-left: 1rem;
   width: 50%;
+  align-items: flex-start;
+  cursor: scroll;
 }
 
 .icon-container {
@@ -185,22 +192,27 @@ h4 {
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
-  background-color: #8758ff;
+  background-color: #1A1A40;
   border-radius: 5%;
   padding: 2rem;
   z-index: 1010;
+  border: 0.8rem solid  rgb(190, 190, 190);
 }
 
 .create-post-input {
   all: unset;
-  background-color: #1A1A40;
+  background-color: #8758ff;
   border: none;
-  color: white;
+  color: black;
   padding: 1rem 0 1rem 0;
   width: 100%;
   border-radius: 1rem;
   -webkit-appearance: none; /* Remove spin buttons in WebKit browsers */
   -moz-appearance: textfield;
+}
+
+input::placeholder {
+  color: black;
 }
 
 .submit-create-post-button {

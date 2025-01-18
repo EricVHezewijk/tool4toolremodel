@@ -11,14 +11,14 @@ function Todo({ task, toggleComplete, deleteTodo, editTodo }) {
       </div>
 
       <div className="post-info-container">
-        <p
-          onClick={() => toggleComplete(task.id)}
-          className={`${task.completed ? "completed" : "incompleted"}`}
-        >
-          <div className="post-text">
-            {task.task}
-          </div>
-        </p>
+        <h3 className="post-title">
+          {task.task}
+        </h3>
+        <div className="post-text">
+          {task.desc}
+        </div>
+
+
         <div className="icon-container">
           <FontAwesomeIcon
             icon={faPenToSquare}

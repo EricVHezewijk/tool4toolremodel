@@ -12,10 +12,10 @@ function TodoWrapper() {
   const [todos, setTodos] = useState([]);
   const [modal, setModal] = useState(false);
 
-  function addTodo(todo) {
+  function addTodo(todo, description) {
     setTodos([
       ...todos,
-      { id: uuidv4(), task: todo, completed: false, isEditing: false },
+      { id: uuidv4(), task: todo, desc: description, completed: false, isEditing: false },
     ]);
   }
 
@@ -62,6 +62,7 @@ function TodoWrapper() {
               <EditTodoForm editTodo={editTask} task={todo} />
             ) : (
               <Todo
+                desc={todo.desc}
                 task={todo}
                 key={todo.id}
                 toggleComplete={toggleComplete}
@@ -77,7 +78,9 @@ function TodoWrapper() {
           </button>
         )}
       </div>
-      {modal && <CreatePostModalWindow setModal={setModal} />}
+      {modal && <CreatePostModalWindow
+        setModal={setModal}
+        addTodo={addTodo} />}
     </>
   );
 }
